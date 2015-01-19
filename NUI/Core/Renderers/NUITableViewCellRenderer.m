@@ -43,6 +43,7 @@
     if ([NUISettings hasProperty:@"background-color" withClass:className]) {
         UIImage *colorImage = [NUISettings getImageFromColor:@"background-color" withClass:className];
         cell.backgroundView = [[UIImageView alloc] initWithImage:colorImage];
+        cell.backgroundColor = [NUISettings getColor:@"background-color" withClass:className];
     }
     
     // Set background gradient
